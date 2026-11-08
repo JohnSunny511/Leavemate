@@ -1,0 +1,61 @@
+﻿@model Leavemate.Models.Employeecls
+
+@{
+    ViewData["Title"] = "Employee Registration";
+}
+
+<h2>Employee Registration</h2>
+
+<form asp-controller="Employee"
+      asp-action="Register_Click"
+      method="post">
+
+    <div>
+        <label>Employee Name</label>
+        <input asp-for="emp_name" required />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Age</label>
+        <input asp-for="emp_age" type="number" required />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Email</label>
+        <input asp-for="emp_email" type="email" required />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Department</label>
+
+        <select asp-for="emp_department"
+                asp-items="ViewBag.selDepartments">
+            <option value="">Select Department</option>
+        </select>
+    </div>
+
+    <br />
+
+    <div>
+        <label>Password</label>
+        <input asp-for="emp_password" type="password" required />
+    </div>
+
+    <br />
+
+    <button type="submit">Register</button>
+
+</form>
+
+@if (TempData["msg"] != null)
+{
+    <script>
+        alert('@Html.Raw(System.Text.Json.JsonSerializer.Serialize(TempData["msg"]))');
+    </script>
+}
