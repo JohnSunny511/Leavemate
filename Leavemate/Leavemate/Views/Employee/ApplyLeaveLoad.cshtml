@@ -1,0 +1,47 @@
+﻿@model Leavemate.Models.Leavecls
+
+<h2>Apply Leave</h2>
+
+@if (ViewBag.msg != null)
+{
+    <p>@ViewBag.msg</p>
+}
+
+<form asp-controller="Employee"
+      asp-action="ApplyLeave_Click"
+      asp-route-id="@ViewBag.EmpId"
+      method="post">
+
+    <label>Leave Type</label>
+    <select asp-for="leave_type"
+            asp-items="ViewBag.LeaveTypes">
+        <option value="">Select Leave Type</option>
+    </select>
+
+    <br /><br />
+
+    <label>Start Date</label>
+    <input asp-for="start_date" type="date" />
+
+    <br /><br />
+
+    <label>End Date</label>
+    <input asp-for="end_date" type="date" />
+
+    <br /><br />
+
+    <label>Reason</label>
+    <textarea asp-for="reason"></textarea>
+
+    <br /><br />
+
+    <button type="submit">Apply Leave</button>
+</form>
+
+<br />
+
+<a asp-controller="Employee"
+   asp-action="DashboardLoad"
+   asp-route-id="@ViewBag.EmpId">
+    Back to Dashboard
+</a>

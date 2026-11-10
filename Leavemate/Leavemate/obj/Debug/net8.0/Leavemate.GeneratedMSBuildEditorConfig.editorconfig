@@ -24,8 +24,24 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbkxvYWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Leavemate/Leavemate/Leavemate/Views/Admin/DashboardLoad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGFzaGJvYXJkTG9hZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Leavemate/Leavemate/Leavemate/Views/Admin/RegisterLoad.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVnaXN0ZXJMb2FkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Leavemate/Leavemate/Leavemate/Views/Employee/ApplyLeaveLoad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQXBwbHlMZWF2ZUxvYWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Leavemate/Leavemate/Leavemate/Views/Employee/DashboardLoad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGFzaGJvYXJkTG9hZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Leavemate/Leavemate/Leavemate/Views/Employee/MyLeavesLoad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcTXlMZWF2ZXNMb2FkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Leavemate/Leavemate/Leavemate/Views/Employee/RegisterLoad.cshtml]

@@ -1,0 +1,56 @@
+﻿@model Leavemate.Models.Employeecls
+
+<h2>Employee Dashboard</h2>
+
+<h3>Welcome, @Model.emp_name!</h3>
+
+<table border="1" cellpadding="10" cellspacing="0">
+    <tr>
+        <th>Total Leave Allowance</th>
+        <td>@Model.total_allowance Days</td>
+    </tr>
+
+    <tr>
+        <th>Used Leave</th>
+        <td>@Model.used_days Days</td>
+    </tr>
+
+    <tr>
+        <th>Available Leave</th>
+        <td>@Model.available_days Days</td>
+    </tr>
+
+    <tr>
+        <th>Pending Requests</th>
+        <td>@Model.pending_requests</td>
+    </tr>
+</table>
+
+<br />
+
+<a asp-controller="Employee"
+   asp-action="ApplyLeaveLoad"
+   asp-route-id="@Model.emp_id">
+    Apply Leave
+</a>
+<br/>
+<a asp-controller="Employee"
+   asp-action="MyLeavesLoad"
+   asp-route-id="@Model.emp_id">
+    My Leaves
+</a>
+
+<br />
+
+<a asp-controller="Employee"
+   asp-action="MyProfileLoad"
+   asp-route-id="@Model.emp_id">
+    My Profile
+</a>
+
+<br />
+
+<a asp-controller="Account"
+   asp-action="Logout">
+    Logout
+</a>

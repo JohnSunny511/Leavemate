@@ -1,6 +1,5 @@
 ﻿using Leavemate.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
 
 namespace Leavemate.Controllers
 {
@@ -31,14 +30,11 @@ namespace Leavemate.Controllers
         }
 
         // Admin Dashboard
-        public IActionResult DashboardLoad()
+        public IActionResult DashboardLoad(int id)
         {
-            if (HttpContext.Session.GetString("role") != "Admin")
-            {
-                return RedirectToAction("LoginLoad", "Account");
-            }
+            Adminclss obj = dbobj.AdminDashboardDB(id);
 
-            return View();
+            return View(obj);
         }
     }
 }

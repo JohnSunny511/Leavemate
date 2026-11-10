@@ -1,7 +1,6 @@
 ﻿using Leavemate.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.AspNetCore.Http;
 
 namespace Leavemate.Controllers
 {
@@ -23,46 +22,39 @@ namespace Leavemate.Controllers
         [HttpPost]
         public IActionResult Login_Click(Login objcls)
         {
-            try
+            Login user = dbobj.LoginDB(objcls);
+
+            if (user != null)
             {
-                int id = dbobj.LoginDB(objcls);
-
-                if (id > 0)
+                if (user.role == "Employee")
                 {
-                    HttpContext.Session.SetInt32("reg_id", id);
-
-                    HttpContext.Session.SetString("role", objcls.role);
-
-                    if (objcls.role == "Employee")
-                    {
-                        return RedirectToAction(
-                            "DashboardLoad", "Employee");
-                    }
-                    else if (objcls.role == "Admin")
-                    {
-                        return RedirectToAction(
-                            "DashboardLoad", "Admin");
-                    }
+                    return RedirectToAction(
+                        "DashboardLoad",
+                        "Employee",
+                        new { id = user.reg_id }
+                    );
                 }
-                else
+                else if (user.role == "Admin")
                 {
-                    TempData["msg"] = "Invalid Username or Password";
+                    return RedirectToAction(
+                        "DashboardLoad",
+                        "Admin",
+                        new { id = user.reg_id }
+                    );
                 }
             }
-            catch (Exception ex)
-            {
-                TempData["msg"] = "Error: " + ex.Message;
-            }
 
-            return RedirectToAction("LoginLoad");
+            ViewBag.msg = "Invalid Username or Password";
+
+            return View("LoginLoad");
         }
 
         // Logout
         public IActionResult Logout()
         {
-            HttpContext.Session.Clear();
+            TempData.Clear();
 
-            return RedirectToAction("LoginLoad");
+            return RedirectToAction("LoginLoad", "Account");
         }
     }
 }

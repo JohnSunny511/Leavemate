@@ -39,3 +39,4 @@ D:\Leavemate\Leavemate\Leavemate\obj\Debug\net8.0\refint\Leavemate.dll
 D:\Leavemate\Leavemate\Leavemate\obj\Debug\net8.0\Leavemate.pdb
 D:\Leavemate\Leavemate\Leavemate\obj\Debug\net8.0\Leavemate.genruntimeconfig.cache
 D:\Leavemate\Leavemate\Leavemate\obj\Debug\net8.0\ref\Leavemate.dll
+D:\Leavemate\Leavemate\Leavemate\obj\Debug\net8.0\Leavemate.sourcelink.json

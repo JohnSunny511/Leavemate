@@ -1,0 +1,45 @@
+﻿@model Leavemate.Models.Adminclss
+
+<h2>Admin Dashboard</h2>
+
+<h3>Welcome, @Model.admin_name!</h3>
+
+<table border="1" cellpadding="10" cellspacing="0">
+    <tr>
+        <th>Total Employees</th>
+        <td>@Model.total_employees</td>
+    </tr>
+
+    <tr>
+        <th>Pending Leave Requests</th>
+        <td>@Model.pending_requests</td>
+    </tr>
+
+    <tr>
+        <th>Approved Leave Requests</th>
+        <td>@Model.approved_requests</td>
+    </tr>
+</table>
+
+<br />
+
+<a asp-controller="Admin"
+   asp-action="ManageLeavesLoad"
+   asp-route-id="@Model.admin_id">
+    Manage Leaves
+</a>
+
+<br />
+
+<a asp-controller="Admin"
+   asp-action="MyProfileLoad"
+   asp-route-id="@Model.admin_id">
+    My Profile
+</a>
+
+<br />
+
+<a asp-controller="Account"
+   asp-action="Logout">
+    Logout
+</a>

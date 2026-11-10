@@ -1,0 +1,41 @@
+﻿@model List<Leavemate.Models.Leavecls>
+
+<h2>My Leaves</h2>
+
+@if (TempData["msg"] != null)
+{
+    <p>@TempData["msg"]</p>
+}
+
+<table border="1" cellpadding="10" cellspacing="0">
+    <tr>
+        <th>Leave Type</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Total Days</th>
+        <th>Reason</th>
+        <th>Status</th>
+        <th>Admin Remark</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.leave_type</td>
+            <td>@item.start_date.ToShortDateString()</td>
+            <td>@item.end_date.ToShortDateString()</td>
+            <td>@item.total_days</td>
+            <td>@item.reason</td>
+            <td>@item.status</td>
+            <td>@item.admin_remark</td>
+        </tr>
+    }
+</table>
+
+<br />
+
+<a asp-controller="Employee"
+   asp-action="DashboardLoad"
+   asp-route-id="@ViewBag.EmpId">
+    Back to Dashboard
+</a>

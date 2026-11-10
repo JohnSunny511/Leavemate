@@ -1,0 +1,374 @@
+Leave Management System – Project Documentation
+Technology: ASP.NET Core MVC · C# · ADO.NET · SQL Server · Stored Procedures
+
+Phase 1 – Database Creation (Database First)
+1. Created SQL Server database LeaveManagementDB.
+2. Created four tables:
+   - Employee – Employee details (ID, Name, Age, Email, Department).
+   - Admin – Admin details (ID, Name, Email).
+   - Login – Login credentials (ID, reg_id, username, password, role).
+   - Leave – Leave applications and approval details.
+3. No foreign key or CHECK constraints created inside the table definitions.
+4. Created stored procedures:
+   - sp_EmployeeRegister – Employee registration.
+   - sp_AdminRegister – Admin registration.
+   - sp_Login – Verifies username and password, returns reg_id and role.
+   - sp_EmployeeDashboard – Employee dashboard statistics.
+   - sp_AdminDashboard – Admin dashboard statistics.
+   - sp_ApplyLeave – Inserts leave application and checks overlapping dates.
+   - sp_MyLeaves – Retrieves employee leave history.
+   - sp_AllLeaves – Retrieves all leave applications with status filtering.
+   - sp_UpdateLeaveStatus – Approves/rejects leave and saves admin remark.
+5. Tested stored procedures directly in SSMS.
+6. Modified Employee table to include emp_age.
+7. Changed Login table's email column to username.
+
+
+Phase 2 – ASP.NET Core MVC Authentication
+Step 1 – Created MVC project
+- Created ASP.NET Core MVC project: LeaveManagementSystem.
+- Installed NuGet package System.Data.SqlClient.
+- Configured SQL Server connection string.
+Step 2 – Created Model classes (Models folder)
+- Employee.cs – Employee properties.
+- Admin.cs – Admin properties.
+- Login.cs – Login properties.
+- DepartmentClass – Department dropdown data.
+Step 3 – Created DB class
+Created a single DBclss.cs inside Models.
+
+Implemented database methods:
+- EmployeeRegisterDB() – Calls sp_EmployeeRegister.
+- AdminRegisterDB() – Calls sp_AdminRegister.
+- LoginDB() – Calls sp_Login.
+Used:
+- SqlConnection
+- SqlCommand
+- CommandType.StoredProcedure
+- Parameters.AddWithValue()
+- ExecuteNonQuery()
+- ExecuteReader()
+- ExecuteScalar() where appropriate
+- try-catch for error handling.
+Step 4 – Employee Registration
+Created EmployeeController.cs.
+- GetDepartments() – Creates department list.
+- RegisterLoad() – Loads registration page and dropdown.
+- ViewBag.selDepartments – Passes departments using SelectList.
+- Register_Click() – Calls EmployeeRegisterDB().
+- Created Views/Employee/RegisterLoad.cshtml.
+Registration fields:
+- Name
+- Age
+- Email
+- Department (dropdown)
+- Password
+Step 5 – Admin Registration
+Created AdminController.cs.
+- RegisterLoad() – Loads registration page.
+- Register_Click() – Calls AdminRegisterDB().
+- Created Views/Admin/RegisterLoad.cshtml.
+Registration fields:
+- Name
+- Email
+- Password
+Step 6 – Login
+Created AccountController.cs.
+- LoginLoad() – Loads login page.
+- Login_Click() – Calls LoginDB().
+- Logout() – Clears TempData.
+Login fields:
+- Username
+- Password
+Login functionality:
+1. User enters username and password.
+2. sp_Login verifies credentials.
+3. Returns reg_id and role.
+4. Controller stores ID and role in TempData.
+5. Redirects to Employee or Admin dashboard based on role.
+Step 7 – TempData configuration
+- Removed Session configuration from Program.cs.
+- Used TempData["reg_id"] to store logged-in user ID.
+- Used TempData["role"] to store account role.
+- Used TempData.Keep() to preserve values across requests.
+- Used TempData["msg"] for alerts and messages.
+- Default route points to Account/LoginLoad.
+
+Current project folder structure
+LeaveManagementSystem/
+│
+├── Controllers/
+│   ├── EmployeeController.cs
+│   ├── AdminController.cs
+│   └── AccountController.cs
+│
+├── Models/
+│   ├── Employee.cs
+│   ├── Admin.cs
+│   ├── Login.cs
+│   └── DBclss.cs
+│
+├── Views/
+│   ├── Employee/
+│   │   └── RegisterLoad.cshtml
+│   │
+│   ├── Admin/
+│   │   └── RegisterLoad.cshtml
+│   │
+│   ├── Account/
+│   │   └── LoginLoad.cshtml
+│   │
+│   └── Shared/
+│
+└── Program.cs
+
+
+
+Phase 3 – Dashboard Implementation
+Step 1 – Updated Employee Model
+
+Updated Employee.cs with additional properties required for dashboard statistics:
+- total_allowance – Total annual leave allowance.
+- used_days – Number of approved leave days used.
+- available_days – Remaining leave days.
+- pending_requests – Number of pending leave applications.
+Step 2 – Updated Employee Dashboard Stored Procedure
+
+Modified sp_EmployeeDashboard to retrieve:
+- Employee name.
+- Total leave allowance (12 days).
+- Used leave days.
+- Available leave days.
+- Pending leave requests.
+Used aggregate queries and subqueries to calculate leave statistics for the selected employee.
+
+Step 3 – Added Database Method
+
+Added DashboardDB(int id) inside DBclss.cs.
+- Calls sp_EmployeeDashboard.
+- Passes employee ID as a parameter.
+- Uses SqlDataReader to retrieve dashboard information.
+- Returns an Employee object containing the dashboard data.
+Step 4 – Created Employee Dashboard Controller Action
+
+Added DashboardLoad() inside EmployeeController.cs.
+- Retrieves the employee ID.
+- Calls DashboardDB() to fetch dashboard information.
+- Passes the Employee object to the dashboard view.
+Step 5 – Created Employee Dashboard View
+
+Created Views/Employee/DashboardLoad.cshtml.
+
+Displayed:
+- Employee name and welcome message.
+- Total leave allowance.
+- Used leave days.
+- Available leave days.
+- Pending leave requests.
+- Navigation links to Apply Leave and My Leaves.
+Step 6 – Admin Dashboard
+
+Implemented the Admin dashboard using:
+- sp_AdminDashboard – Retrieves admin dashboard statistics.
+- AdminDashboardDB() – Retrieves dashboard data through ADO.NET.
+- DashboardLoad() in AdminController.cs.
+- Views/Admin/DashboardLoad.cshtml – Displays admin dashboard information.
+
+Phase 4 – Apply Leave Implementation
+Step 1 – Created Leave Model
+
+Created Leave.cs inside the Models folder.
+
+Added properties:
+- leave_id
+- emp_id
+- leave_type
+- start_date
+- end_date
+- total_days
+- reason
+- status
+- admin_remark
+- admin_id
+Step 2 – Used Existing Stored Procedure
+
+Used sp_ApplyLeave to:
+1. Receive employee ID and leave details.
+2. Check whether an existing Pending or Approved leave overlaps with the requested dates.
+3. Insert the leave application if no overlapping request exists.
+4. Return 1 for successful insertion and 0 if an overlap is found.
+Step 3 – Added Database Method
+
+Added ApplyLeaveDB(Leave obj) inside DBclss.cs.
+- Calls sp_ApplyLeave.
+- Passes employee ID and leave details.
+- Uses ExecuteScalar() to retrieve the stored procedure result.
+- Returns the result to the controller.
+Step 4 – Created Apply Leave Controller Actions
+
+Added the following actions inside EmployeeController.cs:
+- ApplyLeaveLoad(int id) – Loads the Apply Leave page and leave-type dropdown.
+- ApplyLeave_Click(int id, Leave obj) – Receives leave details, validates dates, calculates total days and calls ApplyLeaveDB().
+Total leave days are calculated using:
+obj.total_days = (obj.end_date - obj.start_date).Days + 1;
+
+
+The employee ID is assigned from the route parameter rather than accepting it from the form.
+
+Step 5 – Created Apply Leave View
+
+Created Views/Employee/ApplyLeaveLoad.cshtml.
+
+Form fields:
+- Leave Type (dropdown).
+- Start Date.
+- End Date.
+- Reason.
+The form submits to ApplyLeave_Click() and passes the employee ID using asp-route-id.
+
+Step 6 – Added Navigation
+
+Added an Apply Leave link to the Employee Dashboard.
+- Uses asp-controller="Employee".
+- Uses asp-action="ApplyLeaveLoad".
+- Passes the employee ID using asp-route-id="@Model.emp_id".
+
+Phase 5 – My Leaves Implementation
+Step 1 – Used Existing Stored Procedure
+
+Used sp_MyLeaves to retrieve leave applications belonging to a particular employee.
+- Receives employee ID.
+- Retrieves the employee's leave records.
+- Displays the latest applications first.
+Step 2 – Added Database Method
+
+Added MyLeavesDB(int id) inside DBclss.cs.
+- Calls sp_MyLeaves.
+- Passes employee ID as a parameter.
+- Uses SqlDataReader to retrieve leave records.
+- Stores the retrieved records in a List<Leave>.
+- Returns the list to the controller.
+Step 3 – Created My Leaves Controller Action
+
+Added MyLeavesLoad(int id) inside EmployeeController.cs.
+- Receives employee ID through the route parameter.
+- Calls MyLeavesDB(id).
+- Passes the list of leave records to the view.
+Step 4 – Created My Leaves View
+
+Created Views/Employee/MyLeavesLoad.cshtml.
+
+Displays a table containing:
+- Leave Type.
+- Start Date.
+- End Date.
+- Total Days.
+- Reason.
+- Status.
+- Admin Remark.
+Step 5 – Added Navigation
+
+Added a My Leaves link to the Employee Dashboard.
+- Uses asp-controller="Employee".
+- Uses asp-action="MyLeavesLoad".
+- Passes the employee ID using asp-route-id="@Model.emp_id".
+Added a Back to Dashboard link that also preserves the employee ID.
+
+Design Decisions and Implementation Changes
+1. Changed ID Passing from TempData to Route Parameters
+Initially, the project used TempData to pass the logged-in user's ID and role between pages.
+
+The earlier approach was:
+TempData["reg_id"] = id;
+TempData["role"] = objcls.role;
+
+
+Subsequent controller actions retrieved the ID using:
+int id = Convert.ToInt32(TempData["reg_id"]);
+
+
+However, the project was changed to follow the trainer's method of passing IDs through route parameters.
+
+New approach:
+
+After successful login, the stored procedure returns reg_id and role.
+
+The controller redirects the user to the appropriate dashboard:
+return RedirectToAction(
+    "DashboardLoad",
+    "Employee",
+    new { id = user.reg_id }
+);
+
+
+The dashboard receives the ID directly:
+public IActionResult DashboardLoad(int id)
+{
+    Employee obj = dbobj.DashboardDB(id);
+    return View(obj);
+}
+
+
+In Razor views, IDs are passed through navigation links:
+<a asp-controller="Employee"
+   asp-action="MyLeavesLoad"
+   asp-route-id="@Model.emp_id">
+    My Leaves
+</a>
+
+
+Why this change was made:
+- Makes the ID-passing process easier to understand.
+- IDs are visible in the URL.
+- No need to retrieve IDs from TempData on every page.
+- Makes navigation between pages straightforward.
+- Follows the method demonstrated by the trainer.
+2. Stored Procedure Returns Both ID and Role During Login
+Instead of asking the user to select Employee or Admin during login, sp_Login retrieves the role automatically.
+
+This avoids requiring the user to remember or select their account type.
+
+The returned role determines which dashboard the user is redirected to.
+3. Controller Organization Based on Features and Roles
+The project follows a feature-based and role-based controller structure rather than creating a separate controller for every database table.
+- AccountController – Registration, Login and Logout.
+- EmployeeController – Employee registration, dashboard, Apply Leave, My Leaves and Profile.
+- AdminController – Admin registration, dashboard, Manage Leaves and Profile.
+A separate LeaveController is not required because applying for and viewing leave applications are employee-related features.
+
+LeaveManagementSystem/
+│
+├── Controllers/
+│   ├── AccountController.cs
+│   ├── EmployeeController.cs
+│   └── AdminController.cs
+│
+├── Models/
+│   ├── Employee.cs
+│   ├── Admin.cs
+│   ├── Login.cs
+│   ├── Leave.cs
+│   ├── DepartmentClass
+│   └── DBclss.cs
+│
+├── Views/
+│   ├── Account/
+│   │   └── LoginLoad.cshtml
+│   │
+│   ├── Employee/
+│   │   ├── RegisterLoad.cshtml
+│   │   ├── DashboardLoad.cshtml
+│   │   ├── ApplyLeaveLoad.cshtml
+│   │   ├── MyLeavesLoad.cshtml
+│   │   └── MyProfileLoad.cshtml
+│   │
+│   ├── Admin/
+│   │   ├── RegisterLoad.cshtml
+│   │   ├── DashboardLoad.cshtml
+│   │   ├── ManageLeavesLoad.cshtml
+│   │   └── MyProfileLoad.cshtml
+│   │
+│   └── Shared/
+│
+└── Program.cs
+
