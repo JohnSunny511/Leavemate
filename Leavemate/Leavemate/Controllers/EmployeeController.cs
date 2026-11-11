@@ -124,5 +124,17 @@ namespace Leavemate.Controllers
 
             return View(lst);
         }
+
+        public IActionResult MyProfileLoad(int id)
+        {
+            Employeecls obj = dbobj.EmployeeProfileDB(id);
+
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            return View(obj);
+        }
     }
 }

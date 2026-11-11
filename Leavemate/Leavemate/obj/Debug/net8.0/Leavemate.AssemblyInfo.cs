@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Leavemate")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+336ba787de6ae027d7747f3fad34a9456bf8c695")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+604ff1b3da0892e061126bc16966d3bf032cfba5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Leavemate")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Leavemate")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,54 @@
+﻿@model Leavemate.Models.Employeecls
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Profile</title>
+</head>
+<body>
+
+    <h2>My Profile</h2>
+
+    <hr />
+
+    <h3>Employee Details</h3>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+
+        <tr>
+            <th>Employee ID</th>
+            <td>@Model.emp_id</td>
+        </tr>
+
+        <tr>
+            <th>Name</th>
+            <td>@Model.emp_name</td>
+        </tr>
+
+        <tr>
+            <th>Age</th>
+            <td>@Model.emp_age</td>
+        </tr>
+
+        <tr>
+            <th>Email</th>
+            <td>@Model.emp_email</td>
+        </tr>
+
+        <tr>
+            <th>Department</th>
+            <td>@Model.emp_department</td>
+        </tr>
+
+    </table>
+
+    <br />
+
+    <a asp-controller="Employee"
+       asp-action="DashboardLoad"
+       asp-route-id="@Model.emp_id">
+        Back to Dashboard
+    </a>
+
+</body>
+</html>

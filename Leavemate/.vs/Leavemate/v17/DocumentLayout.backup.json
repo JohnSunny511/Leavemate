@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "D:\\Leavemate\\Leavemate\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|d:\\leavemate\\leavemate\\leavemate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|solutionrelative:leavemate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|d:\\leavemate\\leavemate\\leavemate\\views\\admin\\manageleavesload.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|solutionrelative:leavemate\\views\\admin\\manageleavesload.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|d:\\leavemate\\leavemate\\leavemate\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|solutionrelative:leavemate\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|d:\\leavemate\\leavemate\\leavemate\\models\\adminclss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|solutionrelative:leavemate\\models\\adminclss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|d:\\leavemate\\leavemate\\leavemate\\models\\dbclss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|solutionrelative:leavemate\\models\\dbclss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|d:\\leavemate\\leavemate\\leavemate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|solutionrelative:leavemate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|d:\\leavemate\\leavemate\\leavemate\\models\\leavecls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|solutionrelative:leavemate\\models\\leavecls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|d:\\leavemate\\leavemate\\leavemate\\views\\employee\\dashboardload.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|solutionrelative:leavemate\\views\\employee\\dashboardload.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|d:\\leavemate\\leavemate\\leavemate\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,24 +43,8 @@
       "RelativeMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|solutionrelative:leavemate\\views\\employee\\myleavesload.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|d:\\leavemate\\leavemate\\leavemate\\views\\employee\\dashboardload.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|solutionrelative:leavemate\\views\\employee\\dashboardload.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|d:\\leavemate\\leavemate\\leavemate\\models\\leavecls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|solutionrelative:leavemate\\models\\leavecls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|d:\\leavemate\\leavemate\\leavemate\\views\\admin\\dashboardload.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|solutionrelative:leavemate\\views\\admin\\dashboardload.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|d:\\leavemate\\leavemate\\leavemate\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|solutionrelative:leavemate\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|d:\\leavemate\\leavemate\\leavemate\\models\\adminclss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|solutionrelative:leavemate\\models\\adminclss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2936549F-04F6-4135-9A05-8F2770FF0059}|Leavemate\\Leavemate.csproj|d:\\leavemate\\leavemate\\leavemate\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -82,76 +86,61 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ApplyLeaveLoad.cshtml",
-              "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Views\\Employee\\ApplyLeaveLoad.cshtml",
-              "RelativeDocumentMoniker": "Leavemate\\Views\\Employee\\ApplyLeaveLoad.cshtml",
-              "ToolTip": "D:\\Leavemate\\Leavemate\\Leavemate\\Views\\Employee\\ApplyLeaveLoad.cshtml",
-              "RelativeToolTip": "Leavemate\\Views\\Employee\\ApplyLeaveLoad.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAUAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ManageLeavesLoad.cshtml",
+              "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Views\\Admin\\ManageLeavesLoad.cshtml",
+              "RelativeDocumentMoniker": "Leavemate\\Views\\Admin\\ManageLeavesLoad.cshtml",
+              "ToolTip": "D:\\Leavemate\\Leavemate\\Leavemate\\Views\\Admin\\ManageLeavesLoad.cshtml*",
+              "RelativeToolTip": "Leavemate\\Views\\Admin\\ManageLeavesLoad.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-10T18:27:05.718Z",
+              "WhenOpened": "2026-11-11T09:53:27.109Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MyLeavesLoad.cshtml",
-              "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Views\\Employee\\MyLeavesLoad.cshtml",
-              "RelativeDocumentMoniker": "Leavemate\\Views\\Employee\\MyLeavesLoad.cshtml",
-              "ToolTip": "D:\\Leavemate\\Leavemate\\Leavemate\\Views\\Employee\\MyLeavesLoad.cshtml",
-              "RelativeToolTip": "Leavemate\\Views\\Employee\\MyLeavesLoad.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-10T18:24:14.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Leavecls.cs",
               "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Models\\Leavecls.cs",
               "RelativeDocumentMoniker": "Leavemate\\Models\\Leavecls.cs",
               "ToolTip": "D:\\Leavemate\\Leavemate\\Leavemate\\Models\\Leavecls.cs",
               "RelativeToolTip": "Leavemate\\Models\\Leavecls.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-10T18:10:01.605Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "DashboardLoad.cshtml",
               "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Views\\Employee\\DashboardLoad.cshtml",
               "RelativeDocumentMoniker": "Leavemate\\Views\\Employee\\DashboardLoad.cshtml",
               "ToolTip": "D:\\Leavemate\\Leavemate\\Leavemate\\Views\\Employee\\DashboardLoad.cshtml",
               "RelativeToolTip": "Leavemate\\Views\\Employee\\DashboardLoad.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACgAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-08T07:31:44.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T07:31:44.867Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "Leavemate\\Controllers\\EmployeeController.cs",
-              "ToolTip": "D:\\Leavemate\\Leavemate\\Leavemate\\Controllers\\EmployeeController.cs*",
-              "RelativeToolTip": "Leavemate\\Controllers\\EmployeeController.cs*",
+              "ToolTip": "D:\\Leavemate\\Leavemate\\Leavemate\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "Leavemate\\Controllers\\EmployeeController.cs",
               "ViewState": "AgIAAGAAAAAAAAAAAADwv3oAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T05:44:31.919Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-07T05:44:31.919Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Program.cs",
               "RelativeDocumentMoniker": "Leavemate\\Program.cs",
@@ -164,20 +153,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "DBclss.cs",
               "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Models\\DBclss.cs",
               "RelativeDocumentMoniker": "Leavemate\\Models\\DBclss.cs",
-              "ToolTip": "D:\\Leavemate\\Leavemate\\Leavemate\\Models\\DBclss.cs*",
-              "RelativeToolTip": "Leavemate\\Models\\DBclss.cs*",
-              "ViewState": "AgIAAOoAAAAAAAAAAAAwwP8AAAAvAAAAAAAAAA==",
+              "ToolTip": "D:\\Leavemate\\Leavemate\\Leavemate\\Models\\DBclss.cs",
+              "RelativeToolTip": "Leavemate\\Models\\DBclss.cs",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAAAL0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-06T15:12:45.366Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "DashboardLoad.cshtml",
               "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Views\\Admin\\DashboardLoad.cshtml",
               "RelativeDocumentMoniker": "Leavemate\\Views\\Admin\\DashboardLoad.cshtml",
@@ -185,12 +174,61 @@
               "RelativeToolTip": "Leavemate\\Views\\Admin\\DashboardLoad.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-10T18:08:22.308Z",
+              "WhenOpened": "2026-11-10T18:08:22.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Leavemate\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\Leavemate\\Leavemate\\Leavemate\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Leavemate\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwD4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T06:09:11.641Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
+              "Title": "Adminclss.cs",
+              "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Models\\Adminclss.cs",
+              "RelativeDocumentMoniker": "Leavemate\\Models\\Adminclss.cs",
+              "ToolTip": "D:\\Leavemate\\Leavemate\\Leavemate\\Models\\Adminclss.cs",
+              "RelativeToolTip": "Leavemate\\Models\\Adminclss.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-06T15:07:30.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MyLeavesLoad.cshtml",
+              "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Views\\Employee\\MyLeavesLoad.cshtml",
+              "RelativeDocumentMoniker": "Leavemate\\Views\\Employee\\MyLeavesLoad.cshtml",
+              "ToolTip": "D:\\Leavemate\\Leavemate\\Leavemate\\Views\\Employee\\MyLeavesLoad.cshtml",
+              "RelativeToolTip": "Leavemate\\Views\\Employee\\MyLeavesLoad.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-10T18:24:14.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplyLeaveLoad.cshtml",
+              "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Views\\Employee\\ApplyLeaveLoad.cshtml",
+              "RelativeDocumentMoniker": "Leavemate\\Views\\Employee\\ApplyLeaveLoad.cshtml",
+              "ToolTip": "D:\\Leavemate\\Leavemate\\Leavemate\\Views\\Employee\\ApplyLeaveLoad.cshtml",
+              "RelativeToolTip": "Leavemate\\Views\\Employee\\ApplyLeaveLoad.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-10T18:27:05.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Leavemate\\Controllers\\AccountController.cs",
@@ -198,38 +236,11 @@
               "RelativeToolTip": "Leavemate\\Controllers\\AccountController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAAADEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T15:02:30.519Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T15:02:30.519Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Adminclss.cs",
-              "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Models\\Adminclss.cs",
-              "RelativeDocumentMoniker": "Leavemate\\Models\\Adminclss.cs",
-              "ToolTip": "D:\\Leavemate\\Leavemate\\Leavemate\\Models\\Adminclss.cs",
-              "RelativeToolTip": "Leavemate\\Models\\Adminclss.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T15:07:30.49Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Leavemate\\Controllers\\AdminController.cs",
-              "ToolTip": "D:\\Leavemate\\Leavemate\\Leavemate\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Leavemate\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCAAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T06:09:11.641Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "RegisterLoad.cshtml",
               "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Views\\Employee\\RegisterLoad.cshtml",
               "RelativeDocumentMoniker": "Leavemate\\Views\\Employee\\RegisterLoad.cshtml",
@@ -241,7 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Login.cs",
               "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Models\\Login.cs",
               "RelativeDocumentMoniker": "Leavemate\\Models\\Login.cs",
@@ -249,12 +260,11 @@
               "RelativeToolTip": "Leavemate\\Models\\Login.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T15:09:27.585Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T15:09:27.585Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "LoginLoad.cshtml",
               "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Views\\Account\\LoginLoad.cshtml",
               "RelativeDocumentMoniker": "Leavemate\\Views\\Account\\LoginLoad.cshtml",
@@ -266,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Employeecls.cs",
               "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Models\\Employeecls.cs",
               "RelativeDocumentMoniker": "Leavemate\\Models\\Employeecls.cs",
@@ -278,7 +288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "RegisterLoad.cshtml",
               "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Views\\Admin\\RegisterLoad.cshtml",
               "RelativeDocumentMoniker": "Leavemate\\Views\\Admin\\RegisterLoad.cshtml",
@@ -290,7 +300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Leavemate.csproj",
               "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Leavemate.csproj",
               "RelativeDocumentMoniker": "Leavemate\\Leavemate.csproj",
@@ -302,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Department.cs",
               "DocumentMoniker": "D:\\Leavemate\\Leavemate\\Leavemate\\Models\\Department.cs",
               "RelativeDocumentMoniker": "Leavemate\\Models\\Department.cs",

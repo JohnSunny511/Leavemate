@@ -282,5 +282,177 @@ namespace Leavemate.Models
                 throw;
             }
         }
+
+        public List<Leavecls> AllLeavesDB(string status)
+        {
+            try
+            {
+                List<Leavecls> lst = new List<Leavecls>();
+
+                SqlCommand cmd = new SqlCommand("sp_AllLeaves", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@status", status);
+
+                con.Open();
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    Leavecls obj = new Leavecls();
+
+                    obj.leave_id = Convert.ToInt32(dr["leave_id"]);
+                    obj.emp_id = Convert.ToInt32(dr["emp_id"]);
+                    obj.emp_name = dr["emp_name"].ToString();
+                    obj.emp_department = dr["emp_department"].ToString();
+
+                    obj.leave_type = dr["leave_type"].ToString();
+                    obj.start_date = Convert.ToDateTime(dr["start_date"]);
+                    obj.end_date = Convert.ToDateTime(dr["end_date"]);
+                    obj.total_days = Convert.ToInt32(dr["total_days"]);
+                    obj.reason = dr["reason"].ToString();
+                    obj.status = dr["status"].ToString();
+
+                    obj.admin_remark = dr["admin_remark"] == DBNull.Value
+                        ? ""
+                        : dr["admin_remark"].ToString();
+
+                    lst.Add(obj);
+                }
+
+                con.Close();
+
+                return lst;
+            }
+            catch (Exception)
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+
+                throw;
+            }
+        }
+
+
+
+
+        public int UpdateLeaveStatusDB(int leave_id,string status,string admin_remark,int admin_id)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("sp_UpdateLeaveStatus", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@leave_id", leave_id);
+                cmd.Parameters.AddWithValue("@status", status);
+                cmd.Parameters.AddWithValue("@admin_remark", admin_remark);
+                cmd.Parameters.AddWithValue("@admin_id", admin_id);
+
+                con.Open();
+
+                int result = cmd.ExecuteNonQuery();
+
+                con.Close();
+
+                return result;
+            }
+            catch (Exception)
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+
+                throw;
+            }
+        }
+
+
+
+        public Employeecls EmployeeProfileDB(int id)
+        {
+            try
+            {
+                Employeecls obj = null;
+
+                SqlCommand cmd = new SqlCommand("sp_EmployeeProfile", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@emp_id", id);
+
+                con.Open();
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    obj = new Employeecls();
+
+                    obj.emp_id = Convert.ToInt32(dr["emp_id"]);
+                    obj.emp_name = dr["emp_name"].ToString();
+                    obj.emp_age = Convert.ToInt32(dr["emp_age"]);
+                    obj.emp_email = dr["emp_email"].ToString();
+                    obj.emp_department = dr["emp_department"].ToString();
+                }
+
+                con.Close();
+
+                return obj;
+            }
+            catch (Exception)
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+
+                throw;
+            }
+        }
+
+
+
+        public Adminclss AdminProfileDB(int id)
+        {
+            try
+            {
+                Adminclss obj = null;
+
+                SqlCommand cmd = new SqlCommand("sp_AdminProfile", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@admin_id", id);
+
+                con.Open();
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    obj = new Adminclss();
+
+                    obj.admin_id = Convert.ToInt32(dr["admin_id"]);
+                    obj.admin_name = dr["admin_name"].ToString();
+                    obj.admin_email = dr["admin_email"].ToString();
+                }
+
+                con.Close();
+
+                return obj;
+            }
+            catch (Exception)
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+
+                throw;
+            }
+        }
+
     }
 }

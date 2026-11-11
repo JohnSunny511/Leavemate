@@ -1,0 +1,44 @@
+﻿@model Leavemate.Models.Adminclss
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Profile</title>
+</head>
+<body>
+
+    <h2>My Profile</h2>
+
+    <hr />
+
+    <h3>Admin Details</h3>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+
+        <tr>
+            <th>Admin ID</th>
+            <td>@Model.admin_id</td>
+        </tr>
+
+        <tr>
+            <th>Name</th>
+            <td>@Model.admin_name</td>
+        </tr>
+
+        <tr>
+            <th>Email</th>
+            <td>@Model.admin_email</td>
+        </tr>
+
+    </table>
+
+    <br />
+
+    <a asp-controller="Admin"
+       asp-action="DashboardLoad"
+       asp-route-id="@Model.admin_id">
+        Back to Dashboard
+    </a>
+
+</body>
+</html>
